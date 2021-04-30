@@ -1,0 +1,109 @@
+$red:#e50a13;
+$dark:#000000;
+$gray:#303030;
+$white: #fff;
+$blue:#0360c7;
+@font-face {
+    font-family: netflixSansblack;
+    src: url('../netflix-sans-cufonfonts-webfont/NetflixSansBlack.woff');
+}
+@font-face {
+    font-family: netflixSansbold;
+    src: url('../netflix-sans-cufonfonts-webfont/NetflixSansBold.woff');
+}
+@font-face {
+    font-family: netflixSanslight;
+    src: url('../netflix-sans-cufonfonts-webfont/NetflixSansIcon.woff');
+}
+@font-face {
+    font-family: netflixSansmedium;
+    src: url('../netflix-sans-cufonfonts-webfont/NetflixSansMedium.woff');
+}
+@font-face {
+    font-family: netflixSansregular;
+    src: url('../netflix-sans-cufonfonts-webfont/NetflixSansRegular.woff');
+}
+@font-face {
+    font-family: netflixSansthin;
+    src: url('../netflix-sans-cufonfonts-webfont/NetflixSansThin.woff');
+}
+*{
+    margin: 0;
+    padding: 0;
+    // overflow-x: hidden;
+    box-sizing: border-box;
+}
+body{
+    font-family: netflixSansregular;
+    color: $white;
+    background: $dark;
+    overflow-x: hidden;
+}
+
+// utilities class
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+
+
+.pd-tp-md{
+    padding: 12px;
+}
+.pd-tp-lg{
+    padding: 15px 12px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    @extend .pd-tp-md;  
+    
+}
+
+.btn-red{
+    background: $red;
+    color: $white;
+}
+// layout
+@mixin flex($direction,$justify,$align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+// flex-center
+.flex-center-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.flex-center-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+// container
+.container{
+    max-width: 1019px;
+    margin: 0 56px;
+    padding-top: 8px;
+   
+    
+}
+// border-top-down
+.border-top{
+    border-top: 8px solid $gray;
+    
+}
+.border-down{
+    border-bottom: 8px solid $gray;
+    
+}
